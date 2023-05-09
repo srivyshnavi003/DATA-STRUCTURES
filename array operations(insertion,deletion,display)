@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+int a[100];
+int element,i,j,loc,n,n1;
+printf("enter size\n");
+scanf("%d",&n);
+printf("enter the array elements\n");
+for(i=0;i<n;i++)
+{
+	scanf("%d",&a[i]);
+}
+printf("enter the position to insert element");
+ scanf("%d",&loc);
+ loc--;
+ for(i=n-1;i>=n;i--)
+ {
+ 	a[i+1]=a[i];
+ }
+ a[loc]=element;
+ printf("array after insertion");
+ for(i=0;i<n+1;i++)
+ {
+ 	printf("%d",a[i]);
+ }
+ printf("enter number to delete");
+ scanf("%d",&n1);
+ for(i=0;i<n;i++)
+ {
+ 	if(a[i]==n1)
+ 	{
+ 		for(j=1;j<(n-1);j++)
+ 		{
+ 			a[j]=a[j+1];
+		 }
+		 break;
+	 }
+ }
+ return 0;
+}
